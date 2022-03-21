@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--backgrond);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.blur1, .blur2{
+    position: absolute;
+}
+
+.blur1 {
+    bottom: 0;
+    left: -200px;
+    z-index: -1;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.blur2 {
+    right: 0;
+    top: -200px;
+    z-index: -1;
+    width: 100%;
+    max-width: 900px;
+}
+
+.content {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0 40px;
+    padding-left: 5%;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav ul {
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+header button {
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: 800;
+    font-size: 0.875rem;
+    padding: 11px 38px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid var(--button);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+header button:hover {
+    background-color: #8257E5;
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+header button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+main .main-text {
+    text-align: center;
+}
+
+main .main-text h1, h2{
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+main .main-text h1 {
+    color: var(--text-color);
+    padding-top: 50px;
+}
+
+main .main-text h2 {
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+    
+}
+
+main .main-text h2 {
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+
+
+    80% {
+        opacity: 1;
+    }
+}
+
+main img {
+    width: 1000px;
+    height: auto;
+}
